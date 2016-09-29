@@ -1,0 +1,12 @@
+<ion-view view-title="Dashboard">
+  <ion-content class=''>
+    <div class="list card custom-sub-menu">
+      <a class="item item-icon-left" ng-repeat="submenu in dashboard" href="#/app/dashboard/{{submenu.id}}">
+        <i class="icon {{submenu.icon}}"></i>
+        {{submenu.title}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
+
+

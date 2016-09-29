@@ -1,0 +1,63 @@
+/*
+To custom-side-menuize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+$light:                           #fff !default;
+$stable:                          #3facd4 !default;
+$positive:                        #374250 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.bar.bar-stable .title {
+  color: #FFF;
+}
+.custom-side-menu {
+  background-color: $positive; /* This sets the background color*/
+  .item {
+    border-color: $positive ;
+  }
+
+}
+
+.custom-sub-menu {
+  background-color:#4e6481; /* This sets the background color*/
+  .item {
+    border-color:#4e6481 ;
+  }
+}
+
+.custom-sub-menu, .custom-side-menu  {
+  /*Set the background to transparent for ion-item*/
+  .item {
+    background-color: transparent;
+    border:none;   /*Removes all borders*/
+    border-top: 1px solid;   /*Top Border for each menu item*/
+    border-bottom:2px solid;   /*Bottom border for each menu item*/
+    color: white;    /*Text color for each item*/
+  }
+
+  .item-complex .item-content, .dark .item-radio .item-content {
+    background-color: transparent;
+  }
+
+  /*Just makes the type white*/
+  .custom-side-menu h2,
+  .custom-side-menu h3,
+  .custom-side-menu p,
+  .custom-side-menu a {
+    color: white;  /*Text color for each item, overrides the color property above*/
+  }
+}
+
